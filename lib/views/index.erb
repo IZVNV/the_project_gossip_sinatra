@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Bienvenue sur le comérage en follie !</h1>
+    <% gossips.each do |gossip| %>
+    <p>
+      <%= gossip.author %><br/>
+      <%= gossip.content %>
+    </p>
+    <% end %>
+  <br>
+    <a href="/gossips/new/">Nouveau potin</a>
+    <br>
+  <form action='/gossips/' method='POST'>
+      choisis le numéro de potin :  <input type='string' name='id'/>
+      <input type='submit'/>
+    </form> 
+  </body>
+</html>
